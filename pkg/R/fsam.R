@@ -2,6 +2,8 @@
 #' @description support function to GUI Multiplier function. Not intended to be called directly. Visible beacuse user choose Accounting Multiplier in FSAM at GUI Multiplier
 #' @author Tiara Dewi
 #' @import tcltk2
+#' @export
+
 getposisifsam <- function (){
   win1 <- tktoplevel(width="360",height="400", background = "#ffdead")
   kolom1 <- tclVar("")
@@ -25,18 +27,24 @@ getposisifsam <- function (){
 
   onOK <- function() {
     nameVal <- as.numeric(tclvalue(name))
-    baris1 <- as.numeric(tclvalue(baris1))
-    kolom1 <- as.numeric(tclvalue(kolom1))
+    baris1 <<- as.numeric(tclvalue(baris1))
+    assign("baris_start", baris1, envir= .GlobalEnv)
+    kolom1 <<- as.numeric(tclvalue(kolom1))
+    assign("kolom_start", kolom1, envir= .GlobalEnv)
     baris_t <- as.numeric(tclvalue(baris_t))
-    eksogen <- tclvalue(name)
-    EXP <- as.numeric(strsplit(eksogen, ",")[[1]])
+    assign("baris_total", baris_t, envir= .GlobalEnv)
+    eksogen <<- tclvalue(name)
+    EXP <<- as.numeric(strsplit(eksogen, ",")[[1]])
+    assign("EXP", EXP, envir= .GlobalEnv)
     #print(EXP)
-    newfsam <- getEndogen(sam,EXP,baris1,kolom1)
+    newfsam <<- getEndogen(sam,EXP,baris1,kolom1)
+    assign("sam", newfsam, envir= .GlobalEnv)
     if (baris_t==nrow(sam)){
       Af <- adjustedmatrix(newfsam,baris1,kolom1)
       #print ("adjusted dapat broh :")
       #print (Af)
       Maf <<- accountingmultiplier(Af)
+      assign("Ma", Maf, envir= .GlobalEnv)
       print(Maf)
       tkdestroy(win1)
       displayResult(Maf,"Accounting Multiplier of FSAM",1)

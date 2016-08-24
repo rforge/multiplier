@@ -2,6 +2,8 @@
 #' @description support function to GUI Multiplier function. Not intended to be called directly. Visible because user choose Accounting Multiplier Decomposition in SAM at GUI Multiplier
 #' @author Tiara Dewi
 #' @import tcltk2
+#' @export
+
 getinjeksi <- function(){
   win1 <- tktoplevel(width="360",height="400", background = "#ffdead")
   injeksi <- tclVar("")

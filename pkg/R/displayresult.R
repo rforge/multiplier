@@ -2,6 +2,11 @@
 #' @description support function to GUI Multiplier function. Not intended to be called directly. Visible after user had choose either function of Accounting Multiplier SAM, Accounting Multiplier Decomposition SAM, Fixed Price Multiplier SAM or Accounting Multiplier FSAM.
 #' @author Tiara Dewi
 #' @import tcltk2
+#' @param Ma Mutlipier matrix (accounting or fixed price both SAM or FSAM)
+#' @param judul string indicate the title
+#' @param kode 1 for accounting or fixed price, 2 for decomposition
+#' @export
+
 displayResult <- function (Ma,judul,kode) {
   tclRequire("BWidget")
   win1 <- tktoplevel(width="540",height="540",background="#ffdead")

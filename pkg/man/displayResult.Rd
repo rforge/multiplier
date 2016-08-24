@@ -6,6 +6,13 @@
 \usage{
 displayResult(Ma, judul, kode)
 }
+\arguments{
+\item{Ma}{Mutlipier matrix (accounting or fixed price both SAM or FSAM)}
+
+\item{judul}{string indicate the title}
+
+\item{kode}{1 for accounting or fixed price, 2 for decomposition}
+}
 \description{
 support function to GUI Multiplier function. Not intended to be called directly. Visible after user had choose either function of Accounting Multiplier SAM, Accounting Multiplier Decomposition SAM, Fixed Price Multiplier SAM or Accounting Multiplier FSAM.
 }

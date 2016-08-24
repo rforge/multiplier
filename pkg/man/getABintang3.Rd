@@ -9,7 +9,7 @@ getABintang3(Abintang, Abintang2)
 \arguments{
 \item{Abintang}{A* matrix that generate by ABintang function in Abintang.R}
 
-\item{ABintang2}{A** matrix that generate by ABintang2 function in Abintang2.R}
+\item{Abintang2}{A** matrix that generate by ABintang2 function in Abintang2.R}
 }
 \description{
 support function to GUI Multiplier function. Not intended to be called directly.

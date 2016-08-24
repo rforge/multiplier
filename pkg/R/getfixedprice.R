@@ -2,6 +2,8 @@
 #' @description support function to GUI Multiplier function. Not intended to be called directly. Visible beacuse user choose Accounting Multiplier in FSAM at GUI Multiplier
 #' @author Tiara Dewi
 #' @import tcltk2
+#' @export
+#'
 getFixedprice <- function(){
   win1 <- tktoplevel(width="360",height="400", background = "#ffdead")
   labelText <- tclVar("Input Elasticty Matrix")
@@ -25,6 +27,7 @@ getFixedprice <- function(){
   onNext <- function(){
     ei <<- data.frame()
     ei <<- as.matrix(edit(ei))
+    assign("ei", ei, envir= .GlobalEnv)
     # switch(ncol(ei),
     #        ncol(ei)=p,
     #        stop("Wrong column input"))
@@ -32,24 +35,25 @@ getFixedprice <- function(){
     #        nrow(ei)=p,
     #        stop("Wrong row input"))
      if (ncol(ei)>p){
-         tkmessageBox(message="Cek jumlah kolom\nmatriks elastisitas yang diinput", icon="error")
+         tkmessageBox(message="Wrong column input in elasticity matrix", icon="error")
          tkdestroy(win1)
      }
      else if (ncol(ei)<p){
-       tkmessageBox(message="Cek jumlah kolom\nmatriks elastisitas yang diinput", icon="error")
+       tkmessageBox(message="Wrong column input in elasticity matrix", icon="error")
        tkdestroy(win1)
      }
      else if (nrow(ei)<p){
-       tkmessageBox(message="Cek jumlah baris\nmatriks elastisitas yang diinput", icon="error")
+       tkmessageBox(message="Wrong row input in elasticity matrix", icon="error")
        tkdestroy(win1)
      }
      else if (nrow(ei)<p){
-       tkmessageBox(message="Cek jumlah baris\nmatriks elastisitas yang diinput", icon="error")
+       tkmessageBox(message="Wrong row input in elasticity matrix", icon="error")
        tkdestroy(win1)
     }
      else{
     print(ei)
-    Cn <- fixedprice(A,baris_start,faktor_prod,institusi,keg_prod,eksogen,ei)
+    Cn <<- fixedprice(A,baris_start,faktor_prod,institusi,keg_prod,eksogen,ei)
+    assign("Cn", Cn, envir= .GlobalEnv)
     #print("########################################################")
     #print("matriks pengganda tetap :")
     #print(Cn)
@@ -64,7 +68,7 @@ getFixedprice <- function(){
   win1$env$butNext <-tk2button(win1, text = "Input", width = -6, command = onNext)
   win1$env$butCancel <-tk2button(win1, text = "Cancel", width = -6, command = onCancel)
   tkgrid(win1$env$butNext,win1$env$butCancel, padx=20,pady=20, sticky="ew")
-  bintangsatu <- tclVar("*Matriks elastisitas rumah tangga\ndapat menggunakan model Working Lesser")
+  bintangsatu <- tclVar("*Elasticity matric can be\nobtained by Working Lesser model")
   #bintangdua <- tclVar("*untuk melihat manual, \nlihat Bantuan pada halaman awal")
   win1$env$satu <- tk2label(win1,textvariable = bintangsatu,justify = "left",background = "#ffdead")
   #win1$env$dua <- tk2label(win1,textvariable = bintangsatu,justify = "left",background = "#ffdead")

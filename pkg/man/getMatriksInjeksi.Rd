@@ -7,6 +7,8 @@
 getMatriksInjeksi(injeksi, baris, EXP, baris_start, A)
 }
 \arguments{
+\item{injeksi}{value that will be injected in specified row}
+
 \item{baris}{number containing row number that will be injected generate from user input}
 
 \item{EXP}{list containing row numbers of exogen accounts from user input}

@@ -1,10 +1,10 @@
 Package: multiplier
 Type: Package
-Title: Multiplier
+Title: Multiplier Analysis for SAM and FSAM
 Version: 0.1.0
 Author: Tiara Dewi
 Maintainer: Tiara Dewi <12.7403@stis.ac.id>
-Description: this package was created for Accounting multipler Social Accounting Matrix (SAM), Fixed Price Multiplier SAM, Decompositon of accounting multiplier SAM in 4 accounts, and Accounting multiplier Financial Social Accounting Matrix (FSAM)
+Description: This package was created for Accounting multipler Social Accounting Matrix (SAM), Fixed Price Multiplier SAM, Decompositon of accounting multiplier SAM in 4 accounts, and Accounting multiplier Financial Social Accounting Matrix (FSAM)
 License: GPL (>= 2)
 Depends: R (>= 3.2.4), tcltk2
 LazyData: TRUE

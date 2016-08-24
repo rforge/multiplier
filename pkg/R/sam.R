@@ -2,6 +2,8 @@
 #' @description support function to GUI Multiplier function. Not intended to be called directly. Visible because user choose Accounting Multiplier in SAM at GUI Multiplier
 #' @author Tiara Dewi
 #' @import tcltk2
+#' @export
+
 getposisi <-function(){
   win1 <- tktoplevel(width="360",height="400", background = "#ffdead")
   kolom1 <- tclVar("")
@@ -34,27 +36,27 @@ getposisi <-function(){
 
   onOK <- function() {
     nameVal <- as.numeric(tclvalue(name))
-    baris1 <- as.numeric(tclvalue(baris1))
+    baris1 <<- as.numeric(tclvalue(baris1))
     assign("baris_start", baris1, envir = .GlobalEnv)
-    kolom1 <- as.numeric(tclvalue(kolom1))
+    kolom1 <<- as.numeric(tclvalue(kolom1))
     assign("kolom_start", kolom1, envir = .GlobalEnv)
-    baris_t <- as.numeric(tclvalue(baris_t))
+    baris_t <<- as.numeric(tclvalue(baris_t))
     assign("baris_total", baris_t, envir = .GlobalEnv)
     eksogen <- tclvalue(name)
-    faktor_prod <- as.numeric(tclvalue(faktor))
+    faktor_prod <<- as.numeric(tclvalue(faktor))
     assign("faktor_prod", faktor_prod, envir = .GlobalEnv)
-    institusi <- as.numeric(tclvalue(institusi))
+    institusi <<- as.numeric(tclvalue(institusi))
     assign("institusi", institusi, envir = .GlobalEnv)
-    keg_prod <- as.numeric(tclvalue(kegiatan))
+    keg_prod <<- as.numeric(tclvalue(kegiatan))
     assign("keg_prod", keg_prod, envir = .GlobalEnv)
-    EXP <- as.numeric(strsplit(eksogen, ",")[[1]])
+    EXP <<- as.numeric(strsplit(eksogen, ",")[[1]])
     assign("eksogen", EXP, envir = .GlobalEnv)
-    newsam <- getEndogen(sam,EXP,baris_start,kolom_start)
+    newsam <<- getEndogen(sam,EXP,baris_start,kolom_start)
     if (baris_t==nrow(sam)){
       #if(!exists("")){
       #   stop("no output string was specified")
       # } else {
-        A <- adjustedmatrix(newsam,baris_start,kolom_start)
+        A <<- adjustedmatrix(newsam,baris_start,kolom_start)
         #print ("adjusted dapat broh :")
         assign("A", A, envir = .GlobalEnv)
         print (A)

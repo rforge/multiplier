@@ -5,6 +5,7 @@
 #' @param baris_start number containing start row generate from user input
 #' @param baris number containing row number that will be injected generate from user input
 #' @param EXP list containing row numbers of exogen accounts from user input
+#' @param injeksi value that will be injected in specified row
 #' @author Tiara Dewi
 #'
 getMatriksInjeksi<- function(injeksi,baris,EXP,baris_start,A){

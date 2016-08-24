@@ -9,7 +9,7 @@ getMa2(I, Abintang3)
 \arguments{
 \item{I}{identity matrix}
 
-\item{ABintang3}{A*** matrix that generate by ABintang3 function in Abintang3.R}
+\item{Abintang3}{A*** matrix that generate by ABintang3 function in Abintang3.R}
 }
 \description{
 support function to GUI Multiplier function. Not intended to be called directly.
