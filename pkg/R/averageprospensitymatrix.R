@@ -5,6 +5,7 @@
 #' @param kolom1 number containing start column generate from user input
 #' @param newfsam data that contain endogen accounts only from getendogen.R
 #' @author Tiara Dewi
+#' @export
 
 
 adjustedmatrix <-function(newfsam,baris1,kolom1){

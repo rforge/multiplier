@@ -9,6 +9,7 @@
 #' @param keg_prod number containing end row of economic activities generate from user input
 #' @param EXP list containing row numbers of exogen accounts from user input
 #' @author Tiara Dewi
+#' @export
 
 getMa1 <- function(baris_start,kolom_start,faktor_prod,institusi,EXP,keg_prod,A){
   #Matriks Ma1

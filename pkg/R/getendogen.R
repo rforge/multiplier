@@ -6,6 +6,7 @@
 #' @param fsam data
 #' @param cinta list containing row numbers of exogen accounts from user input
 #' @author Tiara Dewi
+#' @export
 
 
 getEndogen <- function (fsam,cinta,baris1,kolom1){

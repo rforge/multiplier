@@ -5,6 +5,7 @@
 #' @param Abintang A* matrix that generate by ABintang function in Abintang.R
 #' @param Abintang2 A** matrix that generate by ABintang2 function in Abintang2.R
 #' @author Tiara Dewi
+#' @export
 
 
 getMa3 <-function (I, Abintang, Abintang2){

@@ -2,6 +2,8 @@
 #' @description support function to GUI Multiplier function. Not intended to be called directly. Visible after user had choose either function of Accounting Multiplier SAM, Accounting Multiplier Decomposition SAM, Fixed Price Multiplier SAM or Accounting Multiplier FSAM.
 #' @author Tiara Dewi
 #' @import tcltk2
+#' @import tcltk
+#' @import utils
 #' @param Ma Mutlipier matrix (accounting or fixed price both SAM or FSAM)
 #' @param judul string indicate the title
 #' @param kode 1 for accounting or fixed price, 2 for decomposition

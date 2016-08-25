@@ -3,6 +3,7 @@
 #' @details this package was build to calculate the multiplier of Social Accounting Matrix (SAM) and Financial Social Accounting Matrix (FSAM)
 #' @author Tiara Dewi
 #' @import tcltk2
+#' @import tcltk
 #' @export
 gui <- function(){
   win2 <- tktoplevel(width="540",height="540")

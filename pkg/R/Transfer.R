@@ -4,6 +4,7 @@
 #' @param I identity matrix
 #' @param Ma1 Ma1 matrix that generate by getMa1 function in Ma1.R
 #' @author Tiara Dewi
+#' @export
 
 #Ta (Pengganda transfer)
 getTa <- function (Ma1,I){

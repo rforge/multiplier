@@ -9,7 +9,7 @@
 #' @param keg_prod number containing end row of economic activities generate from user input
 #' @param EXP list containing row numbers of exogen accounts from user input
 #' @author Tiara Dewi
-
+#' @export
 
 #Abintang matrix
 #Abintang = Ma1 * Matriks A21 A13 A32

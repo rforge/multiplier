@@ -2,6 +2,9 @@
 #' @description support function to GUI Multiplier function. Not intended to be called directly. Visible because user choose Open File in FSAM at GUI Multiplier.
 #' @details the data must be in Microsoft Excel form ".xlsx" and saved by name sam in global environment
 #' @author Tiara Dewi
+#' @import tcltk2
+#' @import tcltk
+#' @import utils
 #' @export
 
 #fungsi untuk mendapatkan data SAM

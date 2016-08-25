@@ -2,6 +2,7 @@
 #' @description support function to GUI Multiplier function. Not intended to be called directly. Visible because user choose Accounting Multiplier in SAM at GUI Multiplier
 #' @author Tiara Dewi
 #' @import tcltk2
+#' @import tcltk
 #' @export
 
 getposisi <-function(){

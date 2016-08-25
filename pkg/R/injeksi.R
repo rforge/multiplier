@@ -7,6 +7,7 @@
 #' @param EXP list containing row numbers of exogen accounts from user input
 #' @param injeksi value that will be injected in specified row
 #' @author Tiara Dewi
+#' @export
 #'
 getMatriksInjeksi<- function(injeksi,baris,EXP,baris_start,A){
   n <- nrow(A)

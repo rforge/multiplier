@@ -9,6 +9,7 @@
 #' @param EXP list containing row numbers of exogen accounts from user input
 #' @param ei elasticiy matrix that user has input in getFixedprice function in getfixedprice.R
 #' @author Tiara Dewi
+#' @export
 
 fixedprice <- function (A,baris_start,faktor_prod,institusi,keg_prod,EXP,ei){
 

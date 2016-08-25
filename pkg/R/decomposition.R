@@ -6,6 +6,9 @@
 #' @param Oa Open Loop matrix generate by getOa function in OpenLoop.R
 #' @param Ta Transfer Loop matrix generate by getTa function in Transfer.R
 #' @author Tiara Dewi
+#' @export
+
+
 dekomposisi <- function(I,Ca,Oa,Ta) {
   Ca <- Ca%*%I
   Oa <- Oa%*%I

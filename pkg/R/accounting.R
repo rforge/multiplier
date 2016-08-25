@@ -3,7 +3,7 @@
 #' @details this function is to generate multiplier
 #' @param Af prospensity matrix
 #' @author Tiara Dewi
-
+#' @export
 
 accountingmultiplier <- function(Af) {
   #Menghitung Matriks Pengganda Neraca (Ma)

@@ -6,6 +6,7 @@ Author: Tiara Dewi
 Maintainer: Tiara Dewi <12.7403@stis.ac.id>
 Description: This package was created for Accounting multipler Social Accounting Matrix (SAM), Fixed Price Multiplier SAM, Decompositon of accounting multiplier SAM in 4 accounts, and Accounting multiplier Financial Social Accounting Matrix (FSAM)
 License: GPL (>= 2)
-Depends: R (>= 3.2.4), tcltk2
+Depends: R (>= 3.2.4), tcltk2, tcltk
+Imports: utils
 LazyData: TRUE
 RoxygenNote: 5.0.1

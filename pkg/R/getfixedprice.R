@@ -2,6 +2,8 @@
 #' @description support function to GUI Multiplier function. Not intended to be called directly. Visible beacuse user choose Accounting Multiplier in FSAM at GUI Multiplier
 #' @author Tiara Dewi
 #' @import tcltk2
+#' @import tcltk
+#' @import utils
 #' @export
 #'
 getFixedprice <- function(){

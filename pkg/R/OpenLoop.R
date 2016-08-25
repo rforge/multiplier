@@ -5,6 +5,7 @@
 #' @param Ma1 Ma1 matrix that generate by getMa1 function in Ma1.R
 #' @param Ma2 Ma2 matrix that generate by getMa2 function on Ma2.R
 #' @author Tiara Dewi
+#' @export
 
 
 getOa <- function (Ma1,Ma2,I){

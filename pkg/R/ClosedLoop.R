@@ -6,6 +6,7 @@
 #' @param Ma2 Ma2 matrix that generate by getMa2 function in Ma2.R
 #' @param Ma3 Ma3 matrix that generate by getMa3 function in Ma3.R
 #' @author Tiara Dewi
+#' @export
 
 
 getCa <-function (Ma1,Ma2,Ma3,I){

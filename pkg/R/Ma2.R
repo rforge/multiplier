@@ -4,7 +4,7 @@
 #' @param I identity matrix
 #' @param Abintang3 A*** matrix that generate by ABintang3 function in Abintang3.R
 #' @author Tiara Dewi
-
+#' @export
 
 getMa2 <- function (I, Abintang3){
   Ma2 <- solve(I-Abintang3)
